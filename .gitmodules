@@ -2,7 +2,3 @@
 	path = u-boot-xlnx
 	url = https://github.com/analogdevicesinc/u-boot-xlnx.git
 	branch = pluto
-[submodule "hdl"]
-	path = hdl
-	url = https://github.com/analogdevicesinc/hdl
-	branch = hdl_2018_r1
