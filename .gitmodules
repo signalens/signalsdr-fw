@@ -1,7 +1,3 @@
-[submodule "hdl"]
-	path = hdl
-	url = https://github.com/signalens/hdl
-	branch = signalsdrpi
 [submodule "linux"]
 	path = linux
 	url = https://github.com/signalens/linux
