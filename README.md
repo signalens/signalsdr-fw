@@ -1,7 +1,7 @@
 # signalsdrpi-fw
 This is a fork from PlutoSDR Firmware.
 
-* Build Instructions
+* Build Instructions (Tested on Debian 12)
 ```bash
 sudo apt-get install git build-essential fakeroot libncurses5-dev libssl-dev ccache
 sudo apt-get install dfu-util u-boot-tools device-tree-compiler libssl1.0-dev mtools
