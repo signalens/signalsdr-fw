@@ -5,7 +5,8 @@ TARGET_DTS_FILES:= zynq-signalsdrpi.dtb
 COMPLETE_NAME:=SIGNALSDRPI
 ZIP_ARCHIVE_PREFIX:=signalsdrpi
 DEVICE_VID:=0x0456
-DEVICE_PID:=0xb673/*
+DEVICE_PID:=0xb673
+/*
  * U-Boot uImage source file with multiple kernels, ramdisks and FDT blobs
  * This example makes use of the 'loadables' field
  */
