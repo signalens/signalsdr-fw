@@ -27,8 +27,8 @@ $(error "      3] export VIVADO_VERSION=v20xx.x")
 	endif
 endif
 
-TARGET ?= pluto
-SUPPORTED_TARGETS:=pluto sidekiqz2
+TARGET ?= signalsdrpi
+SUPPORTED_TARGETS:=pluto sidekiqz2 signalsdrpi
 
 # Include target specific constants
 include scripts/$(TARGET).mk
@@ -100,7 +100,7 @@ build/zImage: linux/arch/arm/boot/zImage | build
 
 ### Device Tree ###
 
-linux/arch/arm/boot/dts/%.dtb: TOOLCHAIN linux/arch/arm/boot/dts/%.dts  linux/arch/arm/boot/dts/zynq-pluto-sdr.dtsi
+linux/arch/arm/boot/dts/%.dtb: TOOLCHAIN linux/arch/arm/boot/dts/%.dts  linux/arch/arm/boot/dts/zynq-$(TARGET).dtsi
 	$(TOOLS_PATH) DTC_FLAGS=-@ make -C linux -j $(NCORES) ARCH=arm CROSS_COMPILE=$(CROSS_COMPILE) $(notdir $@)
 
 build/%.dtb: linux/arch/arm/boot/dts/%.dtb | build
