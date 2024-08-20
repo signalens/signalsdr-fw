@@ -5,14 +5,14 @@ This is a fork from PlutoSDR Firmware.
 ```bash
 sudo apt-get install git build-essential fakeroot libncurses5-dev libssl-dev ccache
 sudo apt-get install dfu-util u-boot-tools device-tree-compiler libssl1.0-dev mtools
-sudo apt-get install bc python cpio zip unzip rsync file wget gcc-arm-linux-gnueabihf
+sudo apt-get install bc python3 cpio zip unzip rsync file wget gcc-arm-linux-gnueabihf
 git clone --recursive https://github.com/signalens/signalsdrpi-fw
 export CROSS_COMPILE=arm-linux-gnueabihf-
-export PATH=$PATH:/tools/Xilinx/SDK/2019.1/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin
-export VIVADO_SETTINGS=/tools/Xilinx/Vivado/2019.1/settings64.sh
+export PATH=$PATH:/tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin
+export VIVADO_SETTINGS=/tools/Xilinx/Vivado/2023.2/settings64.sh
 export PERL_MM_OPT=
 cd signalsdrpi-fw
-make
+VIVADO_VERSION=v2023.2 make
 make sdimg
 ```
 
