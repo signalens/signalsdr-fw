@@ -12,8 +12,8 @@ export PATH=$PATH:/tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnuea
 export VIVADO_SETTINGS=/tools/Xilinx/Vivado/2023.2/settings64.sh
 export PERL_MM_OPT=
 cd signalsdrpi-fw
-VIVADO_VERSION=v2023.2 make
-make sdimg
+VIVADO_VERSION=v2023.2 make FORCE_UNSAFE_CONFIGURE=1
+make FORCE_UNSAFE_CONFIGURE=1 sdimg
 ```
 
 # plutosdr-fw
