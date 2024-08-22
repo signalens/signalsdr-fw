@@ -191,7 +191,7 @@ SDIMGDIR = $(CURDIR)/build_sdimg
 sdimg: build/
 	mkdir $(SDIMGDIR)
 	cp build/sdk/fsbl/Release/fsbl.elf 	$(SDIMGDIR)/fsbl.elf  
-	cp build/sdk/system_top.bit 	$(SDIMGDIR)/system_top.bit
+	cp build/system_top.bit 	$(SDIMGDIR)/system_top.bit
 	cp build/u-boot.elf 			$(SDIMGDIR)/u-boot.elf
 	cp $(CURDIR)/linux/arch/arm/boot/uImage	$(SDIMGDIR)/uImage
 	cp build/zynq-$(TARGET)-sdr.dtb 	$(SDIMGDIR)/devicetree.dtb
