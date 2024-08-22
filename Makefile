@@ -99,6 +99,7 @@ linux/arch/arm/boot/zImage: TOOLCHAIN
 
 build/zImage: linux/arch/arm/boot/zImage | build
 	cp $< $@
+
 build/uImage: linux/arch/arm/boot/uImage  | build
     cp $< $@
 
