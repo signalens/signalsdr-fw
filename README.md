@@ -9,13 +9,13 @@ sudo apt-get install bc python3 cpio zip unzip rsync file wget gcc-arm-linux-gnu
 sudo apt-get install libncurses5 device-tree-compiler  u-boot-tools xvfb
 git clone --recursive https://github.com/signalens/signalsdrpi-fw
 cd signalsdrpi-fw
+cd buildroot/output/host/
+ln -s /tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/x86_64-petalinux-linux
+cd ../../../
 export CROSS_COMPILE=arm-linux-gnueabihf-
 export PATH=$PATH:/tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin
 export VIVADO_SETTINGS=/tools/Xilinx/Vivado/2023.2/settings64.sh
 export PERL_MM_OPT=
-cd buildroot/output/host/
-ln -s /tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/x86_64-petalinux-linux
-cd ../../../
 VIVADO_VERSION=v2023.2 FORCE_UNSAFE_CONFIGURE=1 make 
 VIVADO_VERSION=v2023.2 FORCE_UNSAFE_CONFIGURE=1 make  sdimg
 ```
