@@ -16,8 +16,8 @@ export PERL_MM_OPT=
 cd buildroot/output/host/
 ln -s /tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/x86_64-petalinux-linux
 cd ../../../
-VIVADO_VERSION=v2023.2 make FORCE_UNSAFE_CONFIGURE=1
-make FORCE_UNSAFE_CONFIGURE=1 sdimg
+VIVADO_VERSION=v2023.2 FORCE_UNSAFE_CONFIGURE=1 make 
+VIVADO_VERSION=v2023.2 FORCE_UNSAFE_CONFIGURE=1 make  sdimg
 ```
 
 # plutosdr-fw
