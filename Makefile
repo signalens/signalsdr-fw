@@ -146,13 +146,17 @@ endif
 
 ### TODO: Build system_top.xsa from src if dl fails ...
 
-build/sdk/fsbl/Release/fsbl.elf build/system_top.bit : build/system_top.xsa
+build/sdk/fsbl/Release/fsbl.elf build/sdk/hw_0/system_top.bit : build/system_top.xsa
 	rm -Rf build/sdk
 ifeq (1, ${HAVE_VIVADO})
 	bash -c "source $(VIVADO_SETTINGS) && xsct scripts/create_fsbl_project.tcl"
 else
+	mkdir -p build/sdk/hw_0
 	unzip -o build/system_top.xsa system_top.bit -d build
 endif
+
+build/system_top.bit: build/sdk/hw_0/system_top.bit
+	cp $< $@
 
 build/boot.bin: build/sdk/fsbl/Release/fsbl.elf build/u-boot.elf
 	@echo img:{[bootloader] $^ } > build/boot.bif
@@ -196,7 +200,7 @@ SDIMGDIR = $(CURDIR)/build_sdimg
 sdimg: build/
 	mkdir $(SDIMGDIR)
 	cp build/sdk/fsbl/Release/fsbl.elf 	$(SDIMGDIR)/fsbl.elf  
-	cp build/system_top.bit 	$(SDIMGDIR)/system_top.bit
+	cp build/sdk/hw_0/system_top.bit  	$(SDIMGDIR)/system_top.bit
 	cp build/u-boot.elf 			$(SDIMGDIR)/u-boot.elf
 	cp $(CURDIR)/linux/arch/arm/boot/uImage	$(SDIMGDIR)/uImage
 	cp $(CURDIR)/linux/arch/arm/boot/zImage	$(SDIMGDIR)/zImage
