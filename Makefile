@@ -148,11 +148,13 @@ endif
 
 build/sdk/fsbl/Release/fsbl.elf build/sdk/hw_0/system_top.bit : build/system_top.xsa
 	rm -Rf build/sdk
-ifeq (1, ${HAVE_VIVADO})
-	bash -c "source $(VIVADO_SETTINGS) && xsct scripts/create_fsbl_project.tcl"
-else
 	mkdir -p build/sdk/hw_0
 	unzip -o build/system_top.xsa system_top.bit -d build
+ifeq (1, ${HAVE_VIVADO})
+	bash -c "source $(VIVADO_SETTINGS) && xsct scripts/create_fsbl_project.tcl"
+# else
+# 	mkdir -p build/sdk/hw_0
+# 	unzip -o build/system_top.xsa system_top.bit -d build
 endif
 
 build/system_top.bit: build/sdk/hw_0/system_top.bit
