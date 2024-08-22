@@ -100,7 +100,7 @@ linux/arch/arm/boot/zImage: TOOLCHAIN
 build/zImage: linux/arch/arm/boot/zImage | build
 	cp $< $@
 
-build/zumage: linux/arch/arm/boot/uImage | build
+build/uImage: linux/arch/arm/boot/uImage | build
 	cp $< $@
 
 ### Device Tree ###
