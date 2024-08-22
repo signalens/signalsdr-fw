@@ -36,4 +36,5 @@
 *.su
 
 build/
+build_sdimg/
 .Xil
