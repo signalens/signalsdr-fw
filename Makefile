@@ -97,12 +97,12 @@ linux/arch/arm/boot/zImage: TOOLCHAIN
 .PHONY: linux/arch/arm/boot/uImage
 
 
-build/zImage: linux/arch/arm/boot/zImage | build
-	cp $< $@
+build/zImage: linux/arch/arm/boot/zImage  | build
+    cp $< $@
 
 build/uImage: linux/arch/arm/boot/uImage  | build
     cp $< $@
-
+	
 ### Device Tree ###
 
 linux/arch/arm/boot/dts/%.dtb: TOOLCHAIN linux/arch/arm/boot/dts/%.dts  linux/arch/arm/boot/dts/zynq-$(TARGET).dtsi
