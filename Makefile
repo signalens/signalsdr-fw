@@ -200,7 +200,7 @@ sdimg: build/
 	cp build/rootfs.cpio.gz  		$(SDIMGDIR)/ramdisk.image.gz
 	mkimage -A arm -T ramdisk -C gzip -d $(SDIMGDIR)/ramdisk.image.gz $(SDIMGDIR)/uramdisk.image.gz
 	touch 	$(SDIMGDIR)/boot.bif
-	echo "image : {[bootloader] $(SDIMGDIR)/fsbl.elf  $(SDIMGDIR)/system_top.bit  $(SDIMGDIR)/u-boot.elf}" >  $(SDIMGDIR)/boot.bif
+	echo "the_ROM_image: : {[bootloader] $(SDIMGDIR)/fsbl.elf  $(SDIMGDIR)/system_top.bit  $(SDIMGDIR)/u-boot.elf}" >  $(SDIMGDIR)/boot.bif
 	bash -c "source $(VIVADO_SETTINGS) && bootgen -image $(SDIMGDIR)/boot.bif -o i $(SDIMGDIR)/BOOT.bin"
 	rm $(SDIMGDIR)/fsbl.elf
 	rm $(SDIMGDIR)/system_top.bit
