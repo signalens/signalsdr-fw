@@ -1,0 +1,16 @@
+[submodule "u-boot-xlnx"]
+	path = u-boot-xlnx
+	url = https://github.com/signalens/u-boot-xlnx
+	branch = signalsdr
+[submodule "linux"]
+	path = linux
+	url = https://github.com/signalens/linux
+	branch = signalsdr
+[submodule "hdl"]
+	path = hdl
+	url = https://github.com/signalens/hdl
+	branch = signalsdr
+[submodule "buildroot"]
+	path = buildroot
+	url = https://github.com/signalens/buildroot
+	branch = signalsdr
