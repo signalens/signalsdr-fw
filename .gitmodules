@@ -2,7 +2,3 @@
 	path = buildroot
 	url = https://github.com/signalens/buildroot
 	branch = signalsdrpi
-[submodule "hdl"]
-	path = hdl
-	url = https://github.com/signalens/hdl
-	branch = signalsdrpi
