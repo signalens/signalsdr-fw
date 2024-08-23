@@ -12,7 +12,7 @@ VSUBDIRS = hdl buildroot linux u-boot-xlnx
 
 VERSION=$(shell git describe --abbrev=4 --dirty --always --tags)
 LATEST_TAG=$(shell git describe --abbrev=0 --tags)
-UBOOT_VERSION=$(shell echo -n "signalsdrpi " && cd u-boot-xlnx && git describe --abbrev=0 --dirty --always --tags)
+UBOOT_VERSION=$(shell echo -n "signalsdr " && cd u-boot-xlnx && git describe --abbrev=0 --dirty --always --tags)
 HAVE_VIVADO= $(shell bash -c "source $(VIVADO_SETTINGS) > /dev/null 2>&1 && vivado -version > /dev/null 2>&1 && echo 1 || echo 0")
 XSA_URL ?= https://github.com/analogdevicesinc/plutosdr-fw/releases/latest/download/system_top.xsa
 
@@ -27,8 +27,8 @@ $(error "      3] export VIVADO_VERSION=v20xx.x")
 	endif
 endif
 
-TARGET ?= signalsdrpi
-SUPPORTED_TARGETS:=pluto sidekiqz2 signalsdrpi
+TARGET ?= signalsdrpro
+SUPPORTED_TARGETS:=pluto sidekiqz2 signalsdrpi signalsdrpro
 
 # Include target specific constants
 include scripts/$(TARGET).mk

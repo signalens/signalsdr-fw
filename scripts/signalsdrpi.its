@@ -16,7 +16,7 @@
 	images {
 
 		fdt@1 {
-			description = "zynq-pluto-sdr";
+			description = "zynq-signalsdrpi";
 			data = /incbin/("../build/zynq-signalsdrpi.dtb");
 			type = "flat_dt";
 			arch = "arm";
@@ -24,7 +24,7 @@
 		};
 
 		fdt@2 {
-			description = "zynq-pluto-sdr-revb";
+			description = "zynq-signalsdrpi-revb";
 			data = /incbin/("../build/zynq-signalsdrpi-revb.dtb");
 			type = "flat_dt";
 			arch = "arm";
@@ -32,7 +32,7 @@
 		};
 
 		fdt@3 {
-			description = "zynq-pluto-sdr-revc";
+			description = "zynq-signalsdrpi-revc";
 			data = /incbin/("../build/zynq-signalsdrpi-revc.dtb");
 			type = "flat_dt";
 			arch = "arm";
