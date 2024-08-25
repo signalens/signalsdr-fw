@@ -1,6 +1,7 @@
 # signalsdr-fw
 This is a fork from PlutoSDR Firmware.
 
+* Pre-compiled binary https://github.com/signalens/signalsdr-fw-bin
 * You need Xilinx Vivado Design Suite to compile the Verilog into the FPGA bit file.
 * You need Xilinx Vivado Vitis to compile C code for the ARM inside the AMD Zynq.
 * Check required version
