@@ -9,6 +9,8 @@ find /opt/Xilinx/ -name vivado -executable -type f | xargs file | grep ELF
 ```
 
 * Build Instructions (Tested on Debian 12)
+  - TARGET=signalsdrpro
+  - TARGET=signalsdrpi
 ```bash
 sudo apt-get install git build-essential fakeroot libncurses5-dev libssl-dev ccache
 sudo apt-get install dfu-util u-boot-tools device-tree-compiler libssl1.0-dev mtools
@@ -24,8 +26,8 @@ export CROSS_COMPILE=arm-linux-gnueabihf-
 export PATH=$PATH:/tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin
 export VIVADO_SETTINGS=/tools/Xilinx/Vivado/2023.2/settings64.sh
 export PERL_MM_OPT=
-VIVADO_VERSION=v2023.2 FORCE_UNSAFE_CONFIGURE=1 make 
-VIVADO_VERSION=v2023.2 FORCE_UNSAFE_CONFIGURE=1 make sdimg
+VIVADO_VERSION=v2023.2 FORCE_UNSAFE_CONFIGURE=1 TARGET=signalsdrpro make 
+VIVADO_VERSION=v2023.2 FORCE_UNSAFE_CONFIGURE=1 TARGET=signalsdrpro make sdimg
 ```
 
 # plutosdr-fw
