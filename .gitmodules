@@ -10,3 +10,7 @@
 	path = buildroot
 	url = https://github.com/signalens/buildroot
 	branch = signalsdr
+[submodule "hdl"]
+	path = hdl
+	url = https://github.com/signalens/hdl.git
+	branch = signalsdr_standalone
