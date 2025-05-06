@@ -24,7 +24,7 @@ cd buildroot/output/host/
 ln -s /tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/x86_64-petalinux-linux
 cd ../../../
 export CROSS_COMPILE=arm-linux-gnueabihf-
-export PATH=/tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:$PATH:
+export PATH=/tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/bin:$PATH
 export VIVADO_SETTINGS=/tools/Xilinx/Vivado/2023.2/settings64.sh
 export PERL_MM_OPT=
 VIVADO_VERSION=v2023.2 FORCE_UNSAFE_CONFIGURE=1 TARGET=signalsdrpro make 
