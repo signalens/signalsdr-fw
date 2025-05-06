@@ -16,7 +16,7 @@ find /opt/Xilinx/ -name vivado -executable -type f | xargs file | grep ELF
 sudo apt-get install git build-essential fakeroot libncurses5-dev libssl-dev ccache
 sudo apt-get install dfu-util u-boot-tools device-tree-compiler libssl1.0-dev mtools
 sudo apt-get install bc python3 cpio zip unzip rsync file wget gcc-arm-linux-gnueabihf
-sudo apt-get install libncurses5 device-tree-compiler u-boot-tools xvfb dfu-util
+sudo apt-get install libncurses5 device-tree-compiler u-boot-tools xvfb dfu-util flex
 git clone --recursive https://github.com/signalens/signalsdr-fw
 cd signalsdr-fw
 mkdir -p buildroot/output/host
