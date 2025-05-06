@@ -19,7 +19,7 @@ sudo apt-get install bc python3 cpio zip unzip rsync file wget gcc-arm-linux-gnu
 sudo apt-get install libncurses5 device-tree-compiler u-boot-tools xvfb dfu-util
 git clone --recursive https://github.com/signalens/signalsdr-fw
 cd signalsdr-fw
-mkdir -p cd buildroot/output/host
+mkdir -p buildroot/output/host
 cd buildroot/output/host/
 ln -s /tools/Xilinx/Vitis/2023.2/gnu/aarch32/lin/gcc-arm-linux-gnueabi/x86_64-petalinux-linux
 cd ../../../
