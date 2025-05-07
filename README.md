@@ -6,18 +6,18 @@ This is a fork from PlutoSDR Firmware.
 * You need Xilinx Vivado Vitis to compile C code for the ARM inside the AMD Zynq.
 * Check required version
 ```bash
-find /opt/Xilinx/ -name vivado -executable -type f | xargs file | grep ELF
+find /tools/Xilinx/ -name vivado -executable -type f | xargs file | grep ELF
 ```
-
-* Build Instructions (Tested on Debian 12)
-  - TARGET=signalsdrpro
-  - TARGET=signalsdrpi
+* Install components 
 ```bash
 sudo apt-get install git build-essential fakeroot libncurses5-dev libssl-dev ccache
 sudo apt-get install dfu-util u-boot-tools device-tree-compiler libssl1.0-dev mtools
 sudo apt-get install bc python3 cpio zip unzip rsync file wget gcc-arm-linux-gnueabihf
 sudo apt-get install libncurses5 device-tree-compiler u-boot-tools xvfb dfu-util flex
 sudo apt-get install bison
+```
+* Build
+```
 git clone --recursive https://github.com/signalens/signalsdr-fw
 cd signalsdr-fw
 mkdir -p buildroot/output/host
