@@ -31,6 +31,7 @@ export PERL_MM_OPT=
 VIVADO_VERSION=v2023.2 FORCE_UNSAFE_CONFIGURE=1 TARGET=signalsdrpro make 
 VIVADO_VERSION=v2023.2 FORCE_UNSAFE_CONFIGURE=1 TARGET=signalsdrpro make sdimg
 ```
+* Copy files in build_sdimg/ to SD Card
 
 # plutosdr-fw
 PlutoSDR Firmware for the [ADALM-PLUTO](https://wiki.analog.com/university/tools/pluto "PlutoSDR Wiki Page") Active Learning Module
